@@ -1,0 +1,558 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://example.org/occ.owl"
+         xmlns="http://example.org/occ.owl#">
+
+<owl:Ontology rdf:about="http://example.org/occ.owl"/>
+
+<owl:ObjectProperty rdf:about="#aboutEvent">
+  <rdfs:range rdf:resource="#Event"/>
+  <rdfs:domain rdf:resource="#Emotion"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#aboutAct">
+  <rdfs:range rdf:resource="#Act"/>
+  <rdfs:domain rdf:resource="#Emotion"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#aboutObject">
+  <rdfs:range rdf:resource="#Object_"/>
+  <rdfs:domain rdf:resource="#Emotion"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#experiencedBy">
+  <rdfs:range rdf:resource="#Agent"/>
+  <rdfs:domain rdf:resource="#Emotion"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasAppraisal">
+  <rdfs:range rdf:resource="#Appraisal"/>
+  <rdfs:domain rdf:resource="#Emotion"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#Agent">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Event">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Act">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Object_">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Appraisal">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#GoalRelatedAppraisal">
+  <rdfs:subClassOf rdf:resource="#Appraisal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#StandardRelatedAppraisal">
+  <rdfs:subClassOf rdf:resource="#Appraisal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#AttitudeRelatedAppraisal">
+  <rdfs:subClassOf rdf:resource="#Appraisal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ProspectRelatedAppraisal">
+  <rdfs:subClassOf rdf:resource="#Appraisal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#AttributionRelatedAppraisal">
+  <rdfs:subClassOf rdf:resource="#Appraisal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Desirability">
+  <rdfs:subClassOf rdf:resource="#GoalRelatedAppraisal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Desirable">
+  <rdfs:subClassOf rdf:resource="#Desirability"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Undesirable">
+  <rdfs:subClassOf rdf:resource="#Desirability"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Praiseworthiness">
+  <rdfs:subClassOf rdf:resource="#StandardRelatedAppraisal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Praiseworthy">
+  <rdfs:subClassOf rdf:resource="#Praiseworthiness"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Blameworthy">
+  <rdfs:subClassOf rdf:resource="#Praiseworthiness"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Appealingness">
+  <rdfs:subClassOf rdf:resource="#AttitudeRelatedAppraisal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Appealing">
+  <rdfs:subClassOf rdf:resource="#Appealingness"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Unappealing">
+  <rdfs:subClassOf rdf:resource="#Appealingness"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Likelihood">
+  <rdfs:subClassOf rdf:resource="#ProspectRelatedAppraisal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Likely">
+  <rdfs:subClassOf rdf:resource="#Likelihood"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Unlikely">
+  <rdfs:subClassOf rdf:resource="#Likelihood"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Agency">
+  <rdfs:subClassOf rdf:resource="#AttributionRelatedAppraisal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SelfCaused">
+  <rdfs:subClassOf rdf:resource="#Agency"/>
+</owl:Class>
+
+<owl:Class rdf:about="#OtherCaused">
+  <rdfs:subClassOf rdf:resource="#Agency"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Unexpectedness">
+  <rdfs:subClassOf rdf:resource="#Appraisal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Effort">
+  <rdfs:subClassOf rdf:resource="#Appraisal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Realization">
+  <rdfs:subClassOf rdf:resource="#Appraisal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Emotion">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#EventBasedEmotion">
+  <rdfs:subClassOf rdf:resource="#Emotion"/>
+</owl:Class>
+
+<owl:Class rdf:about="#AgentBasedEmotion">
+  <rdfs:subClassOf rdf:resource="#Emotion"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ObjectBasedEmotion">
+  <rdfs:subClassOf rdf:resource="#Emotion"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ProspectBasedEmotion">
+  <rdfs:subClassOf rdf:resource="#EventBasedEmotion"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Joy">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#EventBasedEmotion"/>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#hasAppraisal"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#aboutEvent"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#EventBasedEmotion"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Distress">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#EventBasedEmotion"/>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#hasAppraisal"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#aboutEvent"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#EventBasedEmotion"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Hope">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#ProspectBasedEmotion"/>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#hasAppraisal"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#hasAppraisal"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#aboutEvent"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#ProspectBasedEmotion"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Fear">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#ProspectBasedEmotion"/>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#hasAppraisal"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#hasAppraisal"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#aboutEvent"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#ProspectBasedEmotion"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Relief">
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+      <owl:onProperty rdf:resource="#hasAppraisal"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf rdf:resource="#EventBasedEmotion"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Disappointment">
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+      <owl:onProperty rdf:resource="#hasAppraisal"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf rdf:resource="#EventBasedEmotion"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Satisfaction">
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+      <owl:onProperty rdf:resource="#hasAppraisal"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf rdf:resource="#EventBasedEmotion"/>
+</owl:Class>
+
+<owl:Class rdf:about="#FearsConfirmed">
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+      <owl:onProperty rdf:resource="#hasAppraisal"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf rdf:resource="#EventBasedEmotion"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Pride">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#AgentBasedEmotion"/>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#hasAppraisal"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#hasAppraisal"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#aboutAct"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#AgentBasedEmotion"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Shame">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#AgentBasedEmotion"/>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#hasAppraisal"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#hasAppraisal"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#aboutAct"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#AgentBasedEmotion"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Admiration">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#AgentBasedEmotion"/>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#hasAppraisal"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#hasAppraisal"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#aboutAct"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#AgentBasedEmotion"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Reproach">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#AgentBasedEmotion"/>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#hasAppraisal"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#hasAppraisal"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#aboutAct"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#AgentBasedEmotion"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Gratitude">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#AgentBasedEmotion"/>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#hasAppraisal"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#hasAppraisal"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#aboutEvent"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#AgentBasedEmotion"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Anger">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#AgentBasedEmotion"/>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#hasAppraisal"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#hasAppraisal"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#aboutEvent"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#AgentBasedEmotion"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Gratification">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#AgentBasedEmotion"/>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#hasAppraisal"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#hasAppraisal"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#aboutEvent"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#AgentBasedEmotion"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Remorse">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#AgentBasedEmotion"/>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#hasAppraisal"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#hasAppraisal"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#aboutEvent"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#AgentBasedEmotion"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Love">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#ObjectBasedEmotion"/>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#hasAppraisal"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#aboutObject"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#ObjectBasedEmotion"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Hate">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#ObjectBasedEmotion"/>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#hasAppraisal"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:onProperty rdf:resource="#aboutObject"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#ObjectBasedEmotion"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#John">
+  <rdf:type rdf:resource="#Agent"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CakeParty">
+  <rdf:type rdf:resource="#Event"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#JohnHelped">
+  <rdf:type rdf:resource="#Act"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cake">
+  <rdf:type rdf:resource="#Object_"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#joy1">
+  <rdf:type rdf:resource="#Joy"/>
+  <experiencedBy rdf:resource="#John"/>
+  <aboutEvent rdf:resource="#CakeParty"/>
+  <hasAppraisal rdf:resource="#desirable1"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#desirable1">
+  <rdf:type rdf:resource="#Desirable"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#grat1">
+  <rdf:type rdf:resource="#Gratitude"/>
+  <experiencedBy rdf:resource="#John"/>
+  <aboutEvent rdf:resource="#CakeParty"/>
+  <hasAppraisal rdf:resource="#desirable2"/>
+  <hasAppraisal rdf:resource="#othercaused1"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#desirable2">
+  <rdf:type rdf:resource="#Desirable"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#othercaused1">
+  <rdf:type rdf:resource="#OtherCaused"/>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

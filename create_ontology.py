@@ -223,3 +223,18 @@ with onto:
 # --- Save ---
 onto.save(file="occ.owl", format="rdfxml")   # or "ntriples"/"turtle"
 print("Saved to occ.owl")
+
+action_units = {
+    'AU1' : 'Inner Brow Raiser',
+    'AU2' : 'Outer Brow Raiser',
+    'AU4' : 'Brow Lowerer',
+    'AU5' : 'Upper Lid Raiser',
+    'AU6' : 'Cheek Raiser',
+    'AU9' : 'Nose Wrinkler',
+    'AU12' : 'Lip Corner Puller',
+    'AU15' : 'Lip Corner Depressor',
+    'AU17' : 'Chin Raiser',
+    'AU20' : 'Lip Stretcher',
+    'AU25' : 'Lips Part',
+    'AU26' : 'Jaw Drop'
+}
