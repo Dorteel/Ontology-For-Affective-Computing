@@ -1,0 +1,7 @@
+requests
+torch
+transformers==4.49.0
+einops
+timm
+bitsandbytes
+sentence-transformers
